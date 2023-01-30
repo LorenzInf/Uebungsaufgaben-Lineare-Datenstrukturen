@@ -11,7 +11,8 @@ public class Config {
     // Frameworkversion
     public final static String VERSION = "KNB-AOS-GraphicalObject-Java-Framework - 4.5b - 14.01.2022";
     public final static String JAVA_SUPPORTED = "Java 11 bis Java 15";
-
+    public final static int WINDOW_WIDTH = 1000;
+    public final static int WINDOW_HEIGHT = 1000+29;
     // Schaltet die Infomeldungen des Frameworks an oder aus
     public final static boolean INFO_MESSAGES = true;
     public final static boolean DEBUG = false;
