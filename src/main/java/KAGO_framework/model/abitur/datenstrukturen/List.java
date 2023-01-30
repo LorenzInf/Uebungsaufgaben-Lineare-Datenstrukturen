@@ -109,7 +109,8 @@ public class List<ContentType> {
    */
   public boolean isEmpty() {
     // Die Liste ist leer, wenn es kein erstes Element gibt.
-    return first == null;
+    //Todo 1L Implementiere isEmpty() gemäß des javadoc
+    return false;
   }
 
   /**
@@ -120,7 +121,8 @@ public class List<ContentType> {
    */
   public boolean hasAccess() {
     // Es gibt keinen Zugriff, wenn current auf kein Element verweist.
-    return current != null; 
+    //Todo 2L Implementiere hasAccess() gemäß des javadoc
+    return false;
   }
 
   /**
@@ -131,9 +133,7 @@ public class List<ContentType> {
    * den Wert false.
    */
   public void next() {
-    if (this.hasAccess()) {
-      current = current.getNextNode();
-    }
+    //Todo 3L Implementiere next() gemäß des javadoc
   }
 
   /**
@@ -141,9 +141,7 @@ public class List<ContentType> {
    * Objekt. Ist die Liste leer, geschieht nichts.
    */
   public void toFirst() {
-    if (!isEmpty()) {
-      current = first;
-    }
+    //Todo 4L Implementiere toFirst() gemäß des javadoc
   }
 
   /**
@@ -151,9 +149,7 @@ public class List<ContentType> {
    * aktuelles Objekt. Ist die Liste leer, geschieht nichts.
    */
   public void toLast() {
-    if (!isEmpty()) {
-      current = last;
-    }
+    //Todo 5L Implementiere toLast() gemäß des javadoc
   }
 
   /**
@@ -165,11 +161,8 @@ public class List<ContentType> {
    *         kein aktuelles Objekt gibt
    */
   public ContentType getContent() {
-    if (this.hasAccess()) {
-      return current.getContentObject();
-    } else {
-      return null;
-    }
+    //Todo 6L Implementiere getContent() gemäß des javadoc
+    return null;
   }
 
   /**
@@ -181,10 +174,7 @@ public class List<ContentType> {
    *            das zu schreibende Objekt vom Typ ContentType
    */
   public void setContent(ContentType pContent) {
-    // Nichts tun, wenn es keinen Inhalt oder kein aktuelles Element gibt.
-    if (pContent != null && this.hasAccess()) { 
-      current.setContentObject(pContent);
-    }
+    //Todo 7L Implementiere isEmpty() gemäß des javadoc
   }
 
   /**
@@ -225,7 +215,6 @@ public class List<ContentType> {
           first = newNode;
           last = newNode;
         }
-
       }
     }
   }
@@ -241,20 +230,12 @@ public class List<ContentType> {
    *            das anzuhaengende Objekt vom Typ ContentType
    */
   public void append(ContentType pContent) {
-    if (pContent != null) { // Nichts tun, wenn es keine Inhalt gibt.
+    // Nichts tun, wenn es keine Inhalt gibt.
+      //Todo 8L Vervollständige die methode
 
-      if (this.isEmpty()) { // Fall: An leere Liste anfuegen.
-        this.insert(pContent);
-      } else { // Fall: An nicht-leere Liste anfuegen.
+      // Fall: An leere Liste anfuegen.
 
-        // Neuen Knoten erstellen.
-        ListNode newNode = new ListNode(pContent); 
-
-        last.setNextNode(newNode);
-        last = newNode; // Letzten Knoten aktualisieren.
-      }
-
-    }
+      // Fall: An nicht-leere Liste anfuegen.
   }
 
   /**
@@ -269,20 +250,14 @@ public class List<ContentType> {
    */
   public void concat(List<ContentType> pList) {
     if (pList != this && pList != null && !pList.isEmpty()) { // Nichts tun,
-    // wenn pList und this identisch, pList leer oder nicht existent.
+    //Todo 9L Vervollständige die methode
 
-      if (this.isEmpty()) { // Fall: An leere Liste anfuegen.
-        this.first = pList.first;
-        this.last = pList.last;
-      } else { // Fall: An nicht-leere Liste anfuegen.
-        this.last.setNextNode(pList.first);
-        this.last = pList.last;
-      }
+      // Fall: An leere Liste anfuegen.
 
-      // Liste pList loeschen.
-      pList.first = null;
-      pList.last = null;
-      pList.current = null;
+      // Fall: An nicht-leere Liste anfuegen.
+
+      // Liste pList "loeschen."
+
     }
   }
 
@@ -333,15 +308,7 @@ public class List<ContentType> {
    *         der Liste ist
    */
   private ListNode getPrevious(ListNode pNode) {
-    if (pNode != null && pNode != first && !this.isEmpty()) {
-      ListNode temp = first;
-      while (temp != null && temp.getNextNode() != pNode) {
-        temp = temp.getNextNode();
-      }
-      return temp;
-    } else {
-      return null;
-    }
+    //Todo 10L Implementiere getPrevious() gemäß des javadoc
+    return null;
   }
-  
 }

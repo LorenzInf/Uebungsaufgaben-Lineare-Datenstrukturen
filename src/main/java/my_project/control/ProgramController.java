@@ -10,7 +10,7 @@ import my_project.model.QueueBall;
 public class ProgramController {
 
     //Attribute
-    //Todo 1A Mache ein neues 2D String / int Array und stelle dieses beliebig in der View da
+    //Todo Array Erzeuge ein neues 2D String / int Array und stelle dieses beliebig in der View da
 
     // Referenzen
     private ViewController viewController;  // diese Referenz soll auf ein Objekt der Klasse viewController zeigen. Über dieses Objekt wird das Fenster gesteuert.
@@ -31,12 +31,14 @@ public class ProgramController {
      * Sie erstellt die leeren Datenstrukturen, zu Beginn nur eine Queue
      */
     public void startProgram() {
-        // Erstelle ein Objekt der Klasse Ball und lasse es zeichnen
-        /* Todo 5Q Implementiere die funktion, dass wenn "D" gedrückt wird ein Kreis auftaucht und in eine Queue getan
-         * Todo 5Q wird, aus der Queue mit "A" wieder entfernt wird und mit "S" die Farbe des vordersten Kreises
-         * Todo 5Q zu einer zufälligen anderen Farbe geändert wird */
+        //Todo 5Q Implementiere die funktion, dass wenn "D" gedrückt wird ein Kreis auftaucht und in eine Queue getan
+        // wird, aus der Queue mit "A" wieder entfernt wird und mit "S" die Farbe des vordersten Kreises zu einer
+        // zufälligen anderen Farbe geändert wird
         QueueBall queueBall1 = new QueueBall(150,150);
         viewController.draw(queueBall1);
+
+        //Todo 11L Implementiere, ähnlich zu der Queue, eine beliebige Visualisierung für die List. Das current Objekt
+        // sollte erkennbar und beweglich sein
     }
 
     /**
