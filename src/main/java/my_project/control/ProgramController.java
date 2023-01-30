@@ -1,7 +1,10 @@
 package my_project.control;
 
 import KAGO_framework.control.ViewController;
+import KAGO_framework.model.abitur.datenstrukturen.Stack;
 import my_project.model.QueueBall;
+import my_project.model.StackBox;
+import my_project.view.InputManager;
 
 /**
  * Ein Objekt der Klasse ProgramController dient dazu das Programm zu steuern. Die updateProgram - Methode wird
@@ -14,7 +17,8 @@ public class ProgramController {
 
     // Referenzen
     private ViewController viewController;  // diese Referenz soll auf ein Objekt der Klasse viewController zeigen. Über dieses Objekt wird das Fenster gesteuert.
-
+    private Stack<StackBox> boxStack;
+    private StackBox lastBoxInStack;
     /**
      * Konstruktor
      * Dieser legt das Objekt der Klasse ProgramController an, das den Programmfluss steuert.
@@ -31,12 +35,25 @@ public class ProgramController {
      * Sie erstellt die leeren Datenstrukturen, zu Beginn nur eine Queue
      */
     public void startProgram() {
+        new InputManager(this,viewController);
         // Erstelle ein Objekt der Klasse Ball und lasse es zeichnen
         /* Todo 5Q Implementiere die funktion, dass wenn "D" gedrückt wird ein Kreis auftaucht und in eine Queue getan
          * Todo 5Q wird, aus der Queue mit "A" wieder entfernt wird und mit "S" die Farbe des vordersten Kreises
          * Todo 5Q zu einer zufälligen anderen Farbe geändert wird */
         QueueBall queueBall1 = new QueueBall(150,150);
         viewController.draw(queueBall1);
+
+        boxStack = new Stack<>();
+        lastBoxInStack = null;
+    }
+    //Mit W und S sollte am Ende eine neue Box erstellt/gelöscht werden können
+    //TODO 05S Verfolständige die Methode addBoxOnStack in der ein neues Objekt erstellt wird und dieses auf den Stack gelegt wird
+    public void addBoxOnStack(){
+
+    }
+    //TODO 06S Verfolständige die Methode deleteBoxFromStack, welche das oberste Objekt löschen soll
+    public void deleteBoxFromStack(){
+
     }
 
     /**
