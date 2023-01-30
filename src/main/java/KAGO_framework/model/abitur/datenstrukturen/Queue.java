@@ -89,7 +89,8 @@ public class Queue<ContentType> {
 	 * @return true, falls die Schlange leer ist, sonst false
 	 */
 	public boolean isEmpty() {
-		return head == null;
+		//Todo 1Q Implementiere isEmpty() gemäß des javadoc
+		return false;
 	}
 
 	/**
@@ -100,16 +101,7 @@ public class Queue<ContentType> {
 	 *            das anzuhaengende Objekt vom Typ ContentType
 	 */
 	public void enqueue(ContentType pContent) {
-		if (pContent != null) {
-			QueueNode newNode = new QueueNode(pContent);
-			if (this.isEmpty()) {
-				head = newNode;
-				tail = newNode;
-			} else {
-				tail.setNext(newNode);
-				tail = newNode;
-			}
-		}
+		//Todo 2Q Implementiere enqueue() gemäß des javadoc
 	}
 
 	/**
@@ -117,13 +109,7 @@ public class Queue<ContentType> {
 	 * Falls die Schlange leer ist, wird sie nicht veraendert.
 	 */
 	public void dequeue() {
-		if (!this.isEmpty()) {
-			head = head.getNext();
-			if (this.isEmpty()) {
-				head = null;
-				tail = null;
-			}
-		}
+		//Todo 3Q Implementiere dequeue() gemäß des javadoc
 	}
 
 	/**
@@ -135,10 +121,7 @@ public class Queue<ContentType> {
 	 *         falls die Schlange leer ist
 	 */
 	public ContentType front() {
-		if (this.isEmpty()) {
-			return null;
-		} else {
-			return head.getContent();
-		}
+		//Todo 4Q Implementiere front() gemäß des javadoc
+		return null;
 	}
 }

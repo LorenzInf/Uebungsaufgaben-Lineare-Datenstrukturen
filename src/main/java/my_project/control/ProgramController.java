@@ -1,11 +1,7 @@
 package my_project.control;
 
 import KAGO_framework.control.ViewController;
-import KAGO_framework.model.abitur.datenstrukturen.Queue;
-import my_project.model.Ball;
-import my_project.view.InputManager;
-
-import java.awt.event.MouseEvent;
+import my_project.model.QueueBall;
 
 /**
  * Ein Objekt der Klasse ProgramController dient dazu das Programm zu steuern. Die updateProgram - Methode wird
@@ -14,7 +10,7 @@ import java.awt.event.MouseEvent;
 public class ProgramController {
 
     //Attribute
-
+    //Todo 1A Mache ein neues 2D String / int Array und stelle dieses beliebig in der View da
 
     // Referenzen
     private ViewController viewController;  // diese Referenz soll auf ein Objekt der Klasse viewController zeigen. Über dieses Objekt wird das Fenster gesteuert.
@@ -36,9 +32,11 @@ public class ProgramController {
      */
     public void startProgram() {
         // Erstelle ein Objekt der Klasse Ball und lasse es zeichnen
-        Ball ball1 = new Ball(150,150);
-        viewController.draw(ball1);
-
+        /* Todo 5Q Implementiere die funktion, dass wenn "D" gedrückt wird ein Kreis auftaucht und in eine Queue getan
+         * Todo 5Q wird, aus der Queue mit "A" wieder entfernt wird und mit "S" die Farbe des vordersten Kreises
+         * Todo 5Q zu einer zufälligen anderen Farbe geändert wird */
+        QueueBall queueBall1 = new QueueBall(150,150);
+        viewController.draw(queueBall1);
     }
 
     /**
